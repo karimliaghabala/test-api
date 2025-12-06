@@ -13,15 +13,6 @@ app.get("/",(req,res)=>{
     res.send("Salam dünya")
 })
 
-db.authenticate()
-  .then(() => {
-    console.log("✅ Neon-a bağlandı")
-  })
-  .catch((err) => {
-    console.error("❌ DB Xətası:", err.message)
-  })
-  app.use("/", require('./router/userrouter.js'))
-
 app.listen(port,()=>{
     `Server ${port} da bashladildi`
 })
