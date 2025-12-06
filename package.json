@@ -12,6 +12,8 @@
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
+    "body-parser": "^2.2.1",
+    "dotenv": "^17.2.3",
     "express": "^5.2.1",
     "vercel": "^49.1.1"
   }
