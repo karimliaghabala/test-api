@@ -22,15 +22,6 @@ db.authenticate()
   })
   app.use("/", require('./router/userrouter.js'))
 
-app.use((err, req, res, next) => {
-  console.error(err)
-  res.status(500).json({ error: err.message })
+app.listen(port,()=>{
+    `Server ${port} da bashladildi`
 })
-
-if (require.main === module) {
-  app.listen(port, () => {
-    console.log("8080 portunda işləyir 🚀")
-  })
-}
-
-module.exports = app
